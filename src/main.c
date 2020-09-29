@@ -73,7 +73,9 @@ int main(void)
     AWU_APR = 0x3E;         
     AWU_TBR = 0x0F;         /* Maximum amount of interval (17.79sec - 103.5sec) */    
     AWU_CSR = 0x10;         /* Enable the AWU */
-    __asm__("HALT");        /* Enter active-halt mode */ 
+    __asm__("HALT\n");      /* Enter active-halt mode */ 
+
+      
 
     return 0;       /*  We should never reach this point */
 }
